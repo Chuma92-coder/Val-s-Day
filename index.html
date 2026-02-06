@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Will You Be My Valentine, Amaka? 💕</title>
+  <title>Will You Be My Valentine, My Baby , wifey, Amaka Udorah? 💕</title>
   <style>
     body {
       margin: 0;
@@ -16,22 +16,22 @@
       overflow: hidden;
       transition: all 1s ease;
 
-      /* Your animated GIF as background */
+      /* Shared animated GIF background for both pages */
       background-image: url('https://i.postimg.cc/5Nv72VmG/IMG-2463.gif');
-      background-size: cover;           /* Fills screen (change to 'contain' if you prefer full view without crop) */
+      background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-      background-attachment: fixed;     /* Keeps GIF stable */
+      background-attachment: fixed;
 
-      position: relative;               /* For overlay */
+      position: relative;
     }
 
-    /* Dark overlay to make text/buttons readable over the GIF */
+    /* Dark overlay for readability on top of the GIF (applies to both pages) */
     body::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.45);  /* Medium darkness – lower to 0.3 for lighter, raise to 0.6 for darker */
+      background: rgba(0, 0, 0, 0.45); /* Adjust opacity if text is hard to read */
       z-index: -1;
     }
 
@@ -43,7 +43,7 @@
       backdrop-filter: blur(10px);
       max-width: 90%;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      z-index: 1;  /* Above overlay */
+      z-index: 1;
     }
 
     h1 {
@@ -97,8 +97,8 @@
       display: none !important;
     }
 
+    /* Celebration page keeps pulse animation on container */
     .celebration {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
       animation: pulse 2s infinite;
     }
 
@@ -119,8 +119,8 @@
 <body>
 
   <div class="container" id="mainPage">
-    <h1>Amaka, my love ❤️</h1>
-    <p>Will you be my Valentine this year? 💖</p>
+    <h1>Me Wifey Amy, my lover ❤️</h1>
+    <p>Will you be my Valentine Baby? 💖</p>
     
     <div class="buttons">
       <button id="yesBtn" onclick="sayYes()">Yes 😍</button>
@@ -129,8 +129,8 @@
   </div>
 
   <div class="container hidden celebration" id="yesPage">
-    <h1>Yayyyy! I knew you'd say Yes, Amaka! 🎉💕</h1>
-    <p>You're the best thing in my world. I love you forever! 🥰</p>
+    <h1>Yayyyy! I knew you'd say Yes, You no get choice Baby! 🎉💕</h1>
+    <p>You're so sexy baby and i love you so much. I'll love you forever Bo now bring that sexy bum bum😁🍑! 🥰</p>
     <img class="gif" src="https://media.tenor.com/YVJGmyDgaoYAAAAe/happy-jumping.png" alt="Happy jumping celebration">
   </div>
 
@@ -146,7 +146,7 @@
     function sayYes() {
       document.getElementById('mainPage').classList.add('hidden');
       document.getElementById('yesPage').classList.remove('hidden');
-      document.body.classList.add('celebration');
+      // Removed .celebration from body since background is now shared
     }
 
     document.getElementById('noBtn').addEventListener('mouseover', moveNo);
